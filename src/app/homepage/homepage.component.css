@@ -1,0 +1,28 @@
+
+
+.for-forms{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.space-btwn-btns{
+    display: flex;
+    align-items: center;
+justify-content: space-between;
+}
+
+
+.formcontrol {
+    display: block;
+}
+.btn-block-patient-doctor {
+    float: none !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav_center{
+      flex: 1 1 auto;
+
+  }

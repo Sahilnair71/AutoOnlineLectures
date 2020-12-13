@@ -1,0 +1,104 @@
+<mat-toolbar color='primary' class="mat-elevation-z8">
+    <span>Register Here</span>
+</mat-toolbar>
+
+<div class="for-forms">
+    <!-- first stepper -->
+    <mat-vertical-stepper #stepper>
+        <mat-step [stepControl]="registerForm" errorMessage="The mentioned Field is required.">
+            <br><br>
+            <div>
+                <form class="row center-xs center-sm center-md center-lg" [formGroup]="registerForm">
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <ng-template matStepLabel>Fill out your name and password</ng-template>
+                        <mat-form-field appearance='fill' class=" formcontrol ">
+                            <mat-label> EMAIL</mat-label>
+                            <input matInput placeholder=" abc@xyz.com" formControlName="email">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <mat-form-field appearance="fill" class=" formcontrol ">
+                            <mat-label>Enter your password</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" required>
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                                [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <button mat-button matStepperNext>Next</button>
+                    </div>
+
+                </form>
+            </div>
+
+
+        </mat-step>
+
+        <!-- Second Stepper -->
+        <mat-step [stepControl]="UserID_DisplayName_Form" errorMessage="The mentioned Field is required.">
+            <form class=" center-xs" [formGroup]="UserID_DisplayName_Form">
+                <ng-template matStepLabel>Fill out displayname and id </ng-template>
+                <br><br>
+                <mat-form-field appearance='fill' class="formcontrol ">
+                    <mat-label> Id number</mat-label>
+                    <input matInput placeholder="vu1f1......" formControlName="userID">
+                </mat-form-field>
+                <mat-form-field appearance='fill' class="formcontrol ">
+                    <mat-label>Display Name</mat-label>
+                    <input matInput placeholder=" your name" formControlName="displayName">
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+
+
+            </form>
+        </mat-step>
+        <!-- Third Stepper -->
+        <mat-step [stepControl]='final_value'>
+            <br><br>
+            <form [formGroup]='final_value' (ngSubmit)="createUser()">
+                <ng-template matStepLabel>Read terms and conditions </ng-template>
+                <mat-card>
+                    <mat-card-header>
+                        <h2>Note:</h2>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            Do not give CAMERA permission to any app or website
+                        </p>
+                        <mat-checkbox [(ngModel)]='isChecked' (change)="checkValue(isChecked?true:false)"
+                            formControlName="state">
+                        </mat-checkbox>
+                        <p>
+                            By checking the box you agree the terms and condition.
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+
+
+                <div *ngIf="isChecked==false">
+                    <button mat-button disabled>Register</button>
+
+                </div>
+                <div *ngIf="isChecked==true">
+                    <button type="submit" mat-button color="primary">Register</button>
+
+                </div>
+
+                <div *ngIf="this.loading==true">
+                    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+                </div>
+            </form>
+
+        </mat-step>
+
+
+    </mat-vertical-stepper>
+
+    
+</div>

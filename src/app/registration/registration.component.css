@@ -1,0 +1,21 @@
+
+.for-forms{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+.space-btwn-btns{
+    display: flex;
+    align-items: center;
+justify-content: space-between;
+}
+
+
+.formcontrol {
+    display: block;
+}
+.loading{
+    z-index: 999;
+}

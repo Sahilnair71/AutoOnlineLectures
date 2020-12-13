@@ -1,0 +1,21 @@
+.for-forms{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.formcontrol {
+    display: block;
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .container-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+      
+  }

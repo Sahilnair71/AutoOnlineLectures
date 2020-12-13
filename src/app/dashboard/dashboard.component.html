@@ -1,0 +1,52 @@
+<mat-toolbar color='primary' class="mat-elevation-z8">
+    <span>Fill In The Lecture Details Here</span>
+    <span class="example-spacer"></span>
+    <button mat-flat-button color="primary" (click)="logout()">Log Out</button>
+</mat-toolbar>
+
+<div class="for-forms">
+    <div *ngIf=" add_newLecture == true">
+        <form class=" center-xs" [formGroup]="lectureData" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance='fill' class="formcontrol ">
+                <mat-label>Lecture Date</mat-label>
+                <input matInput placeholder="yy/mm/dd" [matDatepicker]="picker" formControlName="lectureDate">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field appearance='fill' class="formcontrol ">
+                <mat-label>Lecture time</mat-label>
+                <input matInput placeholder="hr:mi" [ngxTimepicker]="picker1" formControlName="lectureTime" [format]=24>
+                <ngx-material-timepicker #picker1></ngx-material-timepicker>
+            </mat-form-field>
+            <mat-form-field appearance='fill' class="formcontrol ">
+                <mat-label>Lecture Link</mat-label>
+                <input matInput placeholder=" " formControlName="lectureLink">
+            </mat-form-field>
+            <mat-form-field appearance='fill' class="formcontrol ">
+                <mat-label>Subject Name</mat-label>
+                <input matInput placeholder="" formControlName="subjectName">
+            </mat-form-field>
+            <button type="submit" mat-button color="primary">Submit</button>
+
+
+        </form>
+
+    </div>
+    <div *ngIf=" add_newLecture == false">
+
+        <mat-card class="container-items">
+
+            <h1>Your Response Has Been Recorded!!</h1>
+            <br><br>
+            <h4>Add More Lectures</h4>
+            <br>
+            <button (click)="newDetails()" mat-raised-button color="primary">add new details</button>
+            <br>
+            <h4>OR</h4>
+            <br>
+            <button mat-raised-button color="primary" (click)="logout()">Log Out</button>
+
+        </mat-card>
+
+    </div>
+</div>
