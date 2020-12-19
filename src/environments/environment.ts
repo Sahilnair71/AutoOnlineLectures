@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyAeMh7rBoo2HTbsxuF3WxPm9nl3-AFgPnM",
-    authDomain: "auto-online-class.firebaseapp.com",
+    apiKey: "AIzaSyAPe_lvtlO39hkXNyQfSf2FJxfSpP2ouxk",
+    authDomain: "autoonlinelectures.firebaseapp.com",
     databaseURL: "https://auto-online-class.firebaseio.com",
-    projectId: "auto-online-class",
-    storageBucket: "auto-online-class.appspot.com",
-    messagingSenderId: "848031836856",
-    appId: "1:848031836856:web:eeeaa728a5fb4eb490224d",
+    projectId: "autoonlinelectures",
+    storageBucket: "autoonlinelectures.appspot.com",
+    messagingSenderId: "678036516367",
+    appId: "1:678036516367:web:1ed7392963b272e577fd7a",
     measurementId: "G-454GLLB6XV"
   },
 };
