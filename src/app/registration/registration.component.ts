@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { from } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { auth } from 'firebase/app'
+
 import { AuthService } from '../auth.service'
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 

@@ -3,7 +3,7 @@ import { User } from './user'
 import { from } from 'rxjs';
 import { AngularFireAuth } from "@angular/fire/auth";
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
-import { auth } from 'firebase/app';
+
 import { Router } from "@angular/router";
 import { Observable } from 'rxjs';
 import { LectureDetails } from './lectureDetails'

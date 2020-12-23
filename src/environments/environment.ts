@@ -7,7 +7,7 @@ export const environment = {
   firebase: {
     apiKey: "AIzaSyAPe_lvtlO39hkXNyQfSf2FJxfSpP2ouxk",
     authDomain: "autoonlinelectures.firebaseapp.com",
-    databaseURL: "https://auto-online-class.firebaseio.com",
+
     projectId: "autoonlinelectures",
     storageBucket: "autoonlinelectures.appspot.com",
     messagingSenderId: "678036516367",

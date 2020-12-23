@@ -24,7 +24,7 @@ import { VerifyEmailAddressComponent } from './verify-email-address/verify-email
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core'
-import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker'
 
 @NgModule({
   declarations: [
